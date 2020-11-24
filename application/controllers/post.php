@@ -12,6 +12,7 @@ class post extends CI_Controller{
 
     public function details(){
         $id = $this->uri->segment(3);
+        
         $data['details'] = $this->recipe_model->get_recipe_details($id);
         $this->load->view('post_details',$data);
     }
